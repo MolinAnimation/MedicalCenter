@@ -1,8 +1,10 @@
+package model;
+
 public class User {
     private int id;
     private String name;
     private String email;
-    private String adress;
+    private String address;
     private String phoneNumber;
 
     public User(String name, String email) {
@@ -35,11 +37,11 @@ public class User {
     }
 
     public String getAdress() {
-        return this.adress;
+        return this.address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAdress(String address) {
+        this.address = address;
     }
 
     public String getPhoneNumber() {
@@ -53,6 +55,12 @@ public class User {
         } else if (phoneNumber.length() == 8) {
             this.phoneNumber = phoneNumber;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "User: " + name + ", Email: " + email +
+                "\nAddreess: " + address + ". Phone: " + phoneNumber;
     }
 
 }

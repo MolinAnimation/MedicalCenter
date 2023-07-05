@@ -1,7 +1,9 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor extends User {
+public class Doctor extends User implements IScheduable {
     // Atributos
     String speciality;
 
@@ -73,5 +75,16 @@ public class Doctor extends User {
         public void setTime(String time) {
             this.time = time;
         }
+
+        @Override
+        public String toString() {
+            return "Available Appointments \nDate: " + date + "\nTime " + time;
+        }
+    }
+
+    @Override
+    public void schedule(Date date, String time) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'schedule'");
     }
 }

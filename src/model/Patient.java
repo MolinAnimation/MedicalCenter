@@ -1,8 +1,10 @@
+package model;
+
 public class Patient extends User {
     String birthday;
     double weight;
     double height;
-    String blodd;
+    String blood;
 
     public Patient(String name, String email) {
         super(name, email);
@@ -33,11 +35,16 @@ public class Patient extends User {
     }
 
     public String getBlodd() {
-        return this.blodd;
+        return this.blood;
     }
 
-    public void setBlodd(String blodd) {
-        this.blodd = blodd;
+    public void setBlodd(String blood) {
+        this.blood = blood;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\nAge: " + birthday + "\n Weight: " + getWeight() + "\n Height" + getHeight()
+                + "\nBlood" + blood;
+    }
 }
