@@ -6,7 +6,7 @@ public class Main {
         // showMenu();
         // Crea instancia de doctor
         Doctor myDoctor = new Doctor("Anahi­ Salgado", "Pediatria");
-        System.out.println(myDoctor.name);
+        System.out.println(myDoctor.getName());
         System.out.println(myDoctor.speciality);
 
         // agrega fechas citas disponibles
@@ -21,6 +21,8 @@ public class Main {
         for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
+
+        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
     }
 
 }
