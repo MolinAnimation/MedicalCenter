@@ -87,4 +87,10 @@ public class Doctor extends User implements IScheduable {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'schedule'");
     }
+
+    @Override
+    public void showDatauser() {
+        System.out.println("Hospital: Cruz roja");
+        System.out.println("Departamento: Oncologia");
+    }
 }
