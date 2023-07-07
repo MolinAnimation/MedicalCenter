@@ -2,6 +2,7 @@ package ui;
 
 import java.util.Date;
 import model.Doctor;
+import model.Patient;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Main {
         // Crea instancia de doctor
         Doctor myDoctor = new Doctor("Anahi­ Salgado", "Pediatria");
         System.out.println(myDoctor.getName());
-        System.out.println(myDoctor.speciality);
+        System.out.println(myDoctor.getSpeciality());
 
         // agrega fechas citas disponibles
         myDoctor.addAvailableAppointment(new Date(), "4pm");

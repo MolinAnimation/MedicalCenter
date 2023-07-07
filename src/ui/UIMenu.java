@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class UIMenu {
 
+    public static final String[] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "mayo", "Junio", "Juilo", "julio",
+            "Agosto", "Septimebre", "Octubre", "Noviembre", "Dicimebre" };
+
     public static Doctor doctorLogged;
     public static Patient patientLogged;
 
