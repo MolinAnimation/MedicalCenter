@@ -20,9 +20,9 @@ public class UIMenu {
 
         int response = 0;
         do {
-            System.out.println("Doctor");
-            System.out.println("Patient");
-            System.out.println(" Salir");
+            System.out.println("1. Doctor");
+            System.out.println("2 .Patient");
+            System.out.println("0. Salir");
 
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
@@ -97,7 +97,7 @@ public class UIMenu {
                         emailCorrect = true;
                         // obtener datos de usuario logeado
                         doctorLogged = d;
-                        // show doctor menu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             } else if (userType == 2) {

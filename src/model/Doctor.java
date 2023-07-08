@@ -12,7 +12,6 @@ public class Doctor extends User implements IScheduable {
     // metodo constructor
     public Doctor(String name, String email) {
         super(name, email);
-        System.out.println("Construyendo el Objeto Doctor");
     }
 
     // getters & setters
