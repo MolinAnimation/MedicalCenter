@@ -49,7 +49,7 @@ public abstract class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber.length() > 8) {
+        if (phoneNumber.length() > 10) {
             System.out.println("El numero telefonico debe ser de 8 digitos maximo");
 
         } else if (phoneNumber.length() == 8) {
