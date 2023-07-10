@@ -29,7 +29,7 @@ public class Doctor extends User implements IScheduable {
 
     // Comportamientos
     // Crea array, almacenamiento objetos tipo AvailableAppointments (AA)
-    ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+    private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
     // Crea instancias de AA y las agrega al array
     public void addAvailableAppointment(String date, String time) {
@@ -68,11 +68,11 @@ public class Doctor extends User implements IScheduable {
             this.id = id;
         }
 
-        public Date getDate() {
+        public Date getDate(String DATE) {
             return date;
         }
 
-        public String getDate(String date) {
+        public String getDate() {
             return format.format(date);
         }
 

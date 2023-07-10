@@ -6,9 +6,9 @@ import model.Doctor;
 
 public class UIDoctorMenu {
 
-    public static ArrayList<Doctor> doctorsAvailableApponitment = new ArrayList<>();
+    public static ArrayList<Doctor> doctorsAvailableAppointment = new ArrayList<>();
 
-    // problema de dispariedad con el uso del cero 0
+    // problema de dispariedad con el uso del cero 0 es posible que funcione bien
     public static void showDoctorMenu() {
         int response = 0;
         do {
@@ -84,8 +84,8 @@ public class UIDoctorMenu {
     }
 
     private static void checkDoctorAvailableAppointment(Doctor doctor) {
-        if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableApponitment.contains(doctor)) {
-            doctorsAvailableApponitment.add(doctor);
+        if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointment.contains(doctor)) {
+            doctorsAvailableAppointment.add(doctor);
         }
     }
 
