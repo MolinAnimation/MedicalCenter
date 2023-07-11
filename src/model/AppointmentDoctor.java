@@ -9,6 +9,11 @@ public class AppointmentDoctor implements IScheduable {
     private Date date;
     private String time;
 
+    public AppointmentDoctor(Patient patient, Doctor doctor) {
+        this.patient = patient;
+        this.doctor = doctor;
+    }
+
     public int getId() {
         return this.id;
     }
@@ -42,7 +47,7 @@ public class AppointmentDoctor implements IScheduable {
     }
 
     public String getTime() {
-        return this.time;
+        return this.time + " hrs.";
     }
 
     public void setTime(String time) {
@@ -51,8 +56,8 @@ public class AppointmentDoctor implements IScheduable {
 
     @Override
     public void schedule(Date date, String time) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'schedule'");
+        this.date = date;
+        this.time = time;
     }
 
 }
