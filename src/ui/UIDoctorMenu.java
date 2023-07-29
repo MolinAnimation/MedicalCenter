@@ -57,13 +57,30 @@ public class UIDoctorMenu {
                 System.out.println(monsthSelected + ". " + UIMenu.MONTHS[monsthSelected - 1]);
 
                 System.out.println("Insert the date available: [dd/mm/yyyy]");
-                String date = sc.nextLine();
 
-                System.out.println("You date is: " + date + "\n1. Correct \n2. Change Date");
-                int responseDate = Integer.valueOf(sc.nextLine());
+                String date = sc.nextLine();
+                int responseDate;
+
+                do {
+                    System.out.println("You date is: " + date + "\n1. Correct \n2. Change Date");
+
+                    try {
+                        responseDate = Integer.valueOf(sc.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.println("Please select a correct answer");
+                        responseDate = -1;
+                        continue;
+                    }
+
+                    if (responseDate != 1 && responseDate != 2) {
+                        System.out.println("Please select a correct answer");
+                    }
+                } while (responseDate != 1 && responseDate != 2);
+
                 if (responseDate == 2) {
                     continue;
                 }
+
                 int responseTime = 0;
                 String time = "";
                 do {

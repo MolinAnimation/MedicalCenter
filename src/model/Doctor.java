@@ -8,6 +8,7 @@ import java.util.Date;
 public class Doctor extends User implements IScheduable {
     // Atributos
     String speciality;
+    private static int appointmentIdCount = 1;
 
     // metodo constructor
     public Doctor(String name, String email) {
@@ -55,18 +56,12 @@ public class Doctor extends User implements IScheduable {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
+            this.id = appointmentIdCount;
+            appointmentIdCount++;
             this.time = time;
         }
 
         // getters y setters
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
 
         public Date getDate(String DATE) {
             return date;
@@ -102,7 +97,7 @@ public class Doctor extends User implements IScheduable {
 
     @Override
     public void showDatauser() {
-        System.out.println("Hospital: Cruz roja");
-        System.out.println("Departamento: Oncologia");
+        System.out.println(getName());
+        System.out.println(getSpeciality());
     }
 }

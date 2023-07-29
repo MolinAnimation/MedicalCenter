@@ -74,10 +74,10 @@ public class UIMenu {
 
     private static void authUser(int userType) {
         // userType =1 Doctor
-
+        // creacion de usuarios y doctores para pruebas
         ArrayList<Doctor> doctors = new ArrayList<>();
         doctors.add(new Doctor("Alejandro martinez", "alejandro@gmail.com"));
-        doctors.add(new Doctor("Akaren sosa", "karen@gmail.com"));
+        doctors.add(new Doctor("Akaren sosa", ""));
         doctors.add(new Doctor("rocio gomez", "rocio@gmail.com"));
 
         ArrayList<Patient> patients = new ArrayList<>();
@@ -105,9 +105,11 @@ public class UIMenu {
                     if (p.getEmail().equals(email)) {
                         emailCorrect = true;
                         patientLogged = p;
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
         } while (!emailCorrect);
+
     }
 }

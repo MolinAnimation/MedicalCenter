@@ -1,7 +1,7 @@
 package model;
 
-import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Patient extends User {
     private String birthday;
@@ -74,7 +74,7 @@ public class Patient extends User {
 
     @Override
     public void showDatauser() {
-        System.out.println("Patient");
+        System.out.println(getName());
         System.out.println("Historia clinica");
     }
 }
